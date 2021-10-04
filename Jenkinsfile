@@ -2,7 +2,7 @@ pipeline {
     agent any   
     
     environment {       
-        registry = "magalixcorp/k8scicd"       
+        registry = "enson89/nus"       
         GOCACHE = "/tmp"   
     }   
     
@@ -43,7 +43,7 @@ pipeline {
         }       
         stage('Publish') {           
             environment {               
-                registryCredential = 'dockerhub'           
+                registryCredential = 'dockerhub_id'           
             }           
             steps{               
                 script {                   
