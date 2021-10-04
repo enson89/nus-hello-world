@@ -1,7 +1,6 @@
 FROM golang:alpine AS build-env
 RUN mkdir /go/src/app && apk update && apk add git
 COPY go.mod .
-COPY go.sum .
 RUN go mod download
 ADD main.go /go/src/app/
 WORKDIR /go/src/app
